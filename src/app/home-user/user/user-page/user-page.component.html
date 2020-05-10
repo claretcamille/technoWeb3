@@ -1,0 +1,27 @@
+<ul class="navbar navbar-dark bg-dark">  
+    <li  routerLinkActive="active">
+        <a class=" text-muted" [routerLink]="['../user']">User</a>
+    </li>
+
+    <li  routerLinkActive="active">
+        <a class=" text-muted" [routerLink]="['../home']">Home</a>
+    </li>
+
+    <li  routerLinkActive="active">
+        <a class="text-muted" [routerLink]="['../search']"> Search </a>
+    </li>
+
+    <li  routerLinkActive="active">
+        <a class="text-muted" [routerLink]="['']">Disconect</a>  
+    </li>
+</ul>
+<div class="container">
+    
+    <h2 class=" pb-4 mb-4 border-bottom">
+        <img src="../favicon.ico" alt="" width="60" height="60"> 
+        UserName   
+    </h2>
+
+    <app-form-user></app-form-user>
+    
+</div>   

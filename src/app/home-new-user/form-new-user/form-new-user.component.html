@@ -1,0 +1,32 @@
+
+<div class="p-3 border bg-light">
+    <form class="form-new-user" [formGroup]="newUserForm" (ngSubmit)="onSubmitForm()">
+      <img class="mb-4" width="72" height="72" *ngIf="fileUploaded" [src]="fileUrl">
+      <img class="mb-4" width="100" height="100" *ngIf="!fileUploaded" src="../favicon.ico">
+      <br>
+      <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+      <br>
+      <div class="form-group">
+        <label for="inputPseudo" class="sr-only">Pseudo</label>
+        <input type="text" id="inputPseudo" class="form-control" placeholder="pseudo" formControlName="pseudo">
+        <br>
+      </div>
+      <div class="form-group">
+        <input type="file" (change)="detectFiles($event)"
+            class="form-control" accept="image/*">
+        <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
+      </div>
+      <div class="form-group">
+        <label for="inputPhone" class="sr-only">Phone</label>
+        <input type="text" id="inputPhone" class="form-control" placeholder="phone" formControlName="phone">
+        <br>
+      </div>
+      <div class="form-group">
+        <label for="inputAbout" class="sr-only">About</label>
+        <textarea type="text" id="inputAbout" class="form-control" placeholder="this about" name="about" rows="3" ngModel required autofocus></textarea>
+        <br>
+      </div>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" > Validate </button>
+    </form>
+  </div>

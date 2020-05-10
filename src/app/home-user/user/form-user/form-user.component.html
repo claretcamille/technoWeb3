@@ -1,0 +1,37 @@
+<div class="border bg-light">
+    <form class="form-signin">
+        <h4 class="h3 mb-3 font-weight-normal"> Input your modification </h4>
+        <br>
+        <div class="form-group">
+            <label for="inputName" class="sr-only">Name</label>
+            <input type="text" id="inputName" class="form-control" placeholder="this name" name="name" ngModel required autofocus>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="this address" name="id" ngModel required autofocus>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="inputPhone" class="sr-only">Phone</label>
+            <input type="text" id="inpuPhone" class="form-control" placeholder="this phone" name="phone" ngModel required autofocus>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="inputPw" class="sr-only">Name</label>
+            <input type="password" id="inputPw" class="form-control" placeholder="this pw" name="pw" ngModel required autofocus>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="inputAbout" class="sr-only">About</label>
+            <textarea type="text" id="inputAbout" class="form-control" placeholder="this about" name="about" rows="3" ngModel required autofocus></textarea>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="inputURLpicture" class="sr-only">About</label>
+            <input type="text" id="inputURLpicture" rows="3" class="form-control" placeholder="input url to choose profile picture" name="picture" ngModel required autofocus>
+            <br>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" [routerLink]="['../user']"> Update </button>
+    </form>
+</div>
